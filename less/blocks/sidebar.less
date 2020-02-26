@@ -1,0 +1,51 @@
+.sidebar {
+  width: 270px;
+}
+
+.sidebar__menu {
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+.sidebar__list {
+  .reset();
+  list-style: none;
+}
+
+.sidebar__item {
+  position: relative;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  
+  &:hover {
+    .sidebar__link {
+      color: @violet;
+      .transition();
+    }
+    
+    svg {
+      stroke: @violet;
+      .transition();
+    }
+  }
+}
+
+.sidebar__link {
+  display: block;
+  padding: 16px 38px;
+  font-size: 15px;
+  line-height: 18px;
+  .transition();
+}
+
+.sidebar__btn {
+  position: absolute;
+  top: 17px;
+  right: 23px;
+  
+  svg {
+    width: 11px;
+    height: 11px;
+    stroke: #4F4F4F;
+    .transition();
+  }
+}
