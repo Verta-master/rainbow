@@ -1,0 +1,66 @@
+.social {
+  .reset();
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.social__item {
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.social__link {
+  width: 41px;
+  height: 41px;
+  display: block;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.1);
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  &--in {
+    background-image: url(../img/icons/instagram.svg);
+    background-size: 18px 18px;
+    
+    &:hover,
+    &:active {
+      background-image: 
+        url(../img/icons/instagram.svg),
+        linear-gradient(218.66deg, #532BD6 15.33%, #D61B58 37.04%, #F14136 49.86%, #E67767 68.36%, #F8D876 83.67%);
+      background-size: 18px 18px, cover;
+    }
+  }
+  
+  &--fb {
+    background-image: url(../img/icons/facebook.svg);
+    background-size: 11px 19px;
+    
+    &:hover,
+    &:active {
+      background-color: #3C589A;
+    }
+  }
+  
+  &--ok {
+    background-image: url(../img/icons/ok.svg);
+    background-size: 13px 21px;
+    
+    &:hover,
+    &:active {
+      background-color: #F9931D;
+    }
+  }
+  
+  &--vk {
+    background-image: url(../img/icons/vk.svg);
+    background-size: 22px 13px;
+    
+    &:hover,
+    &:active {
+      background-color: #4D75A3;
+    }
+  }
+}
