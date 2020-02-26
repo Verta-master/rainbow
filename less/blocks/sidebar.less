@@ -26,6 +26,10 @@
       stroke: @violet;
       .transition();
     }
+    
+    .sidebar__drop {
+      display: flex;
+    }
   }
 }
 
@@ -47,5 +51,52 @@
     height: 11px;
     stroke: #4F4F4F;
     .transition();
+  }
+}
+
+.sidebar__drop {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 100;
+  background-color: #fff;
+}
+
+.sidebar__sublist {
+  .reset();
+  list-style: none;
+  width: 270px;
+  padding: 15px 30px;
+}
+
+.sidebar__subitem {
+  position: relative;
+  .transition();
+  
+  a {
+    display: block;
+    padding: 5px 0;
+    font-size: 13px;
+  }
+  
+  span {
+    position: absolute;
+    top: 3px;
+    right: 0;
+    color: #BDBDBD;
+    .transition();
+  }
+  
+  &:hover,
+  &:active,
+  &--active {
+    color: @violet;
+    .transition();
+    
+    span {
+      color: @violet;
+      .transition();
+    }
   }
 }
