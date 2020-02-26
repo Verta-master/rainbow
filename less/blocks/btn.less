@@ -1,0 +1,27 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 15px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #1FA97B;
+  border-radius: 3px;
+  box-shadow: 0 2px 16px rgba(31,169,123,0.5);
+  .transition();
+  
+  &--black {
+    font-weight: 500;
+    background-color: #333333;
+    box-shadow: none;
+  }
+  
+  &:hover,
+  &:active {
+    background-color: @violet;
+    .transition();
+  }
+}
