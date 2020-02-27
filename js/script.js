@@ -23,6 +23,13 @@ if (window.innerWidth < 1022) {
   })
 }
 
+//Filter
+if (window.innerWidth < 1200) {
+  $('.filter__title').click(function() {
+    $(this).next().slideToggle();
+  })
+}
+
 //Scroll to top
 $(window).scroll(function(){
   if ((window.pageYOffset || document.documentElement.scrollTop ||document.body.scrollTop) >= 100) {
