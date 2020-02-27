@@ -892,10 +892,53 @@ h3,
 .menu__btn {
   display: none;
 }
+.menu__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.menu__catalog {
+  width: 270px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.15);
+  background-image: url(../img/icons/menu.svg);
+  background-repeat: no-repeat;
+  background-size: 20px 14px;
+  background-position: left 40px center;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.menu__catalog:hover,
+.menu__catalog:active {
+  background-color: #B666CC;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
 .menu__list {
   margin: 0;
   padding: 0;
   list-style: none;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -909,22 +952,6 @@ h3,
           flex-grow: 1;
   -webkit-transition: ease-out 0.3s;
   transition: ease-out 0.3s;
-}
-.menu__item--catalog {
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-  width: 270px;
-  padding-left: 32px;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 800;
-  font-size: 14px;
-  background-color: rgba(255, 255, 255, 0.15);
-  background-image: url(../img/icons/menu.svg);
-  background-repeat: no-repeat;
-  background-size: 20px 14px;
-  background-position: left 40px center;
 }
 .menu__item:hover,
 .menu__item:active {
@@ -1066,6 +1093,7 @@ h3,
 .filter__title {
   width: 100%;
   height: 50px;
+  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1084,8 +1112,8 @@ h3,
   background-color: #B666CC;
 }
 .filter__drop {
-  padding: 0 30px;
-  padding-bottom: 10px;
+  padding: 10px 30px;
+  padding-bottom: 20px;
 }
 .checkbox {
   display: none;
@@ -1093,8 +1121,8 @@ h3,
 .checkbox-label {
   position: relative;
   display: block;
-  padding-top: 8px;
-  padding-bottom: 12px;
+  padding-top: 12px;
+  padding-bottom: 7px;
   padding-left: 37px;
   font-size: 15px;
   line-height: 20px;
@@ -1102,7 +1130,7 @@ h3,
 .checkbox-label::before {
   content: "";
   position: absolute;
-  top: 10px;
+  top: 13px;
   left: 0;
   width: 15px;
   height: 15px;
@@ -1409,6 +1437,13 @@ h3,
 .catalog__item {
   position: relative;
   width: 33.33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 20px;
   background-color: #fff;
   border: 1px solid #F0F0F0;
@@ -1519,6 +1554,9 @@ h3,
   margin-right: 10px;
   fill: #fff;
 }
+.catalog__form {
+  margin-top: auto;
+}
 .info {
   margin-bottom: 20px;
   padding: 20px 40px;
@@ -1606,6 +1644,9 @@ h3,
   width: 40px;
   height: 4px;
   background-color: #B666CC;
+}
+.footer__title span {
+  display: none;
 }
 .footer__menu {
   margin: 0;
@@ -1870,4 +1911,336 @@ h3,
 .modal__link:active {
   color: #B666CC;
   text-decoration: underline;
+}
+@media (max-width: 1199px) {
+  .sidebar,
+  .wrapper__content,
+  .wrapper {
+    width: 100%;
+  }
+  .btn-top {
+    right: 15px;
+    left: auto;
+  }
+  .wrapper--columns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .promo__view {
+    width: calc(100% - 300px);
+  }
+  .search__input {
+    width: 170px;
+  }
+  .sidebar__menu {
+    display: none;
+    width: 270px;
+    position: absolute;
+    top: 150px;
+    left: 15px;
+    z-index: 1000;
+  }
+  .menu__catalog--open {
+    background-image: url(../img/icons/cross-white.svg);
+    background-size: 16px 16px;
+  }
+  .sidebar__item:hover .sidebar__drop {
+    display: none;
+  }
+  .sidebar__btn {
+    width: 50px;
+    height: 50px;
+    top: 2px;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .sidebar__link {
+    padding-right: 50px;
+  }
+  .sidebar__sublist {
+    padding: 0 30px;
+  }
+  .sidebar__drop {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: static;
+  }
+  .filter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .filter__drop {
+    display: none;
+  }
+  .filter__block {
+    width: 270px;
+  }
+  .filter__title {
+    cursor: pointer;
+  }
+}
+@media (max-width: 1022px) {
+  .info__img img {
+    max-width: 50%;
+  }
+  .catalog__item {
+    width: 300px;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .catalog__list {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .benefits__img {
+    width: 50px;
+  }
+  .benefits__item:nth-child(2) .benefits__info {
+    width: 150px;
+  }
+  .footer__menu,
+  .header__price,
+  .search {
+    display: none;
+  }
+  .header__cart svg {
+    margin-right: 0;
+  }
+  .menu {
+    position: relative;
+  }
+  .menu__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .menu__btn {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/icons/menu.svg);
+    background-repeat: no-repeat;
+    background-size: 20px 14px;
+    background-position: center;
+  }
+  .menu__btn--open {
+    background-image: url(../img/icons/cross-white.svg);
+    background-size: 16px 16px;
+  }
+  .menu__list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1000;
+    width: 270px;
+    background-color: #1FA97B;
+  }
+  .menu__link {
+    padding-right: 20px;
+    text-align: right;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .footer__wrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer__block--logo {
+    width: 50%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-bottom: 20px;
+  }
+  .footer__block--contacts {
+    width: 50%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-bottom: 20px;
+  }
+  .footer__block--catalog {
+    width: 50%;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .footer__block--info {
+    width: 50%;
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  .footer__title {
+    cursor: pointer;
+  }
+  .footer__title span {
+    display: inline;
+    margin-left: 10px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 766px) {
+  .promo {
+    display: block;
+  }
+  .promo__product,
+  .promo__view {
+    width: 100%;
+  }
+  .promo__slide {
+    min-height: 420px;
+  }
+  .promo__view {
+    margin-bottom: 20px;
+  }
+  .benefits__list {
+    display: block;
+  }
+  .benefits__item {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-right: 0;
+    border-bottom: 1px solid #f2f2f2;
+  }
+  .benefits__item:last-child {
+    border-bottom: 0;
+  }
+  .benefits__img {
+    width: 71px;
+    margin-right: 15px;
+  }
+  .benefits__info,
+  .benefits__item:nth-child(2) .benefits__info {
+    width: 180px;
+  }
+  .footer__block--contacts,
+  .footer__block--logo {
+    width: 100%;
+  }
+  .footer__text {
+    max-width: 100%;
+  }
+  .header__wrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-top: 5px;
+    padding-bottom: 10px;
+  }
+  .header__wrap .logo {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .header__user {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .header__contacts {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    width: 100%;
+    margin-top: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .sidebar__menu {
+    top: 171px;
+  }
+  .modal__content {
+    padding-right: 30px;
+  }
+  .fancybox-close-small {
+    margin-right: 0;
+  }
+}
+@media (max-width: 480px) {
+  .header__wrap .logo {
+    width: 100%;
+  }
+  .header__wrap .phone {
+    font-size: 16px;
+  }
+  .header__wrap .phone-call {
+    margin-top: 0;
+  }
+  .header__user {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .header__contacts {
+    margin-top: 10px;
+  }
+  .promo__title {
+    font-size: 36px;
+  }
+  .info {
+    padding: 10px 20px;
+  }
+  .info__img {
+    display: block;
+  }
+  .info__img img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  .filter {
+    display: block;
+  }
+  .footer__block--catalog,
+  .footer__block--info {
+    width: 100%;
+    padding-top: 0;
+    margin-bottom: 10px;
+  }
+  .catalog__item,
+  .filter__block {
+    width: 100%;
+  }
+  .modal__login {
+    width: 100%;
+    float: none;
+  }
+  .sidebar__menu {
+    top: 219px;
+  }
 }

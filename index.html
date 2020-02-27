@@ -64,12 +64,10 @@
     </div>
   </header>
   <nav class="menu">
-    <div class="wrapper">
+    <div class="wrapper menu__wrap">
       <button type="button" class="menu__btn"></button>
+      <a href="#" class="menu__catalog">Каталог товаров</a>
       <ul class="menu__list">
-        <li class="menu__item menu__item--catalog">
-          <a href="#" class="menu__link">Каталог  товаров</a>
-        </li>
         <li class="menu__item">
           <a href="#" class="menu__link">О нас</a>
         </li>
@@ -656,7 +654,7 @@
         </ul>
       </div>
       <div class="footer__block footer__block--info">
-        <p class="footer__title">Информация</p>
+        <p class="footer__title">Информация<span>&rsaquo;</span></p>
         <ul class="footer__menu">
           <li><a href="#">О нас</a></li>
           <li><a href="#">Контакты</a></li>
@@ -669,7 +667,7 @@
         </ul>
       </div>
       <div class="footer__block footer__block--catalog">
-        <p class="footer__title">Каталог</p>
+        <p class="footer__title">Каталог<span>&rsaquo;</span></p>
         <ul class="footer__menu">
           <li><a href="#">Картины по номерам</a></li>
           <li><a href="#">Алмазная мозаика</a></li>
@@ -781,6 +779,15 @@
     $(function() {
       $("#tabs").tabs();
     });
+  </script>
+  
+  <!-- Filter -->
+  <script>
+    if (window.innerWidth < 1200) {
+      $('.filter__title').click(function() {
+        $(this).next().slideToggle();
+      })
+    }
   </script>
 </body>
 </html>
