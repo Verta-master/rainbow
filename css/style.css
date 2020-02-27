@@ -1009,6 +1009,7 @@ h3,
   list-style: none;
   width: 270px;
   padding: 15px 30px;
+  padding-bottom: 19px;
 }
 .sidebar__subitem {
   position: relative;
@@ -1017,7 +1018,7 @@ h3,
 }
 .sidebar__subitem a {
   display: block;
-  padding: 5px 0;
+  padding: 3px 0 5px 0;
   font-size: 13px;
 }
 .sidebar__subitem span {
@@ -1696,4 +1697,177 @@ h3,
 .social__link--vk:hover,
 .social__link--vk:active {
   background-color: #4D75A3;
+}
+.modal {
+  padding: 0;
+  width: 488px;
+  max-width: 100%;
+}
+.modal__title {
+  margin: 0;
+  padding: 15px 30px;
+  padding-bottom: 20px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1;
+  color: #333333;
+  background-color: #F2F2F2;
+}
+.modal__form {
+  width: 100%;
+}
+.modal__content {
+  padding: 40px 30px;
+  padding-right: 150px;
+}
+.fancybox-close-small {
+  height: 60px;
+  margin-right: 15px;
+}
+.modal__input,
+.modal__message {
+  width: 100%;
+  display: block;
+  font-size: 16px;
+  border: 1px solid #E0E0E0;
+  border-radius: 3px;
+}
+.modal__input::-webkit-input-placeholder, .modal__message::-webkit-input-placeholder {
+  opacity: 1;
+  color: #BDBDBD;
+}
+.modal__input::-moz-placeholder, .modal__message::-moz-placeholder {
+  opacity: 1;
+  color: #BDBDBD;
+}
+.modal__input:-ms-input-placeholder, .modal__message:-ms-input-placeholder {
+  opacity: 1;
+  color: #BDBDBD;
+}
+.modal__input::-ms-input-placeholder, .modal__message::-ms-input-placeholder {
+  opacity: 1;
+  color: #BDBDBD;
+}
+.modal__input::placeholder,
+.modal__message::placeholder {
+  opacity: 1;
+  color: #BDBDBD;
+}
+.modal__input {
+  height: 38px;
+  margin-bottom: 24px;
+  padding: 0 10px;
+}
+.modal__message {
+  height: 80px;
+  min-height: 80px;
+  margin-bottom: 36px;
+  padding: 7px 10px;
+}
+.modal__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 38px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+  text-align: center;
+  color: #BB6BD9;
+  text-transform: uppercase;
+  border: 2px solid #BB6BD9;
+  border-radius: 3px;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.modal__btn:hover,
+.modal__btn:active {
+  color: #fff;
+  background-color: #B666CC;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.modal__checkbox {
+  display: none;
+}
+.modal__label {
+  position: relative;
+  display: block;
+  margin-bottom: 30px;
+  padding-left: 30px;
+  font-size: 16px;
+  line-height: 22px;
+}
+.modal__label::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #BB6BD9;
+  border-radius: 4px;
+}
+.modal__checkbox:checked + .modal__label::before {
+  background-color: #B666CC;
+  background-image: url(../img/icons/tick.svg);
+  background-size: 12px 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.modal__comment {
+  margin-bottom: 0;
+  font-size: 13px;
+}
+.modal__comment a {
+  text-decoration: underline;
+}
+.modal__comment a:hover,
+.modal__comment a:active {
+  text-decoration: none;
+  color: #B666CC;
+}
+.modal__titles {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #F2F2F2;
+}
+.modal__titles .ui-tabs-active {
+  background-color: #fff;
+}
+.modal__name a {
+  display: block;
+  padding: 15px 30px;
+  padding-bottom: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1;
+  outline: none;
+}
+.modal__login {
+  width: 138px;
+  float: left;
+  margin-right: 30px;
+}
+.modal__link {
+  display: block;
+  padding-top: 5px;
+  font-weight: 600;
+  text-align: right;
+}
+.modal__link:hover,
+.modal__link:active {
+  color: #B666CC;
+  text-decoration: underline;
 }
