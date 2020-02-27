@@ -26,3 +26,30 @@
     .transition();
   }
 }
+
+.btn-top {
+  position: fixed;
+  z-index: 1000;
+  left: ~"calc(50% + 527px)";
+  bottom: 93px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 58px;
+  height: 50px;
+  padding-top: 10px;
+  border-radius: 10px;
+  background-color: rgba(79,79,79,0.5);
+  
+  svg {
+    display: block;
+    stroke: #E0E0E0;
+  }
+  
+  &:hover,
+  &:active {
+    svg {
+      stroke: #fff;
+    }
+  }
+}
