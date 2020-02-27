@@ -1,0 +1,170 @@
+.modal {
+  padding: 0;
+  width: 488px;
+  max-width: 100%;
+}
+
+.modal__title {
+  margin: 0;
+  padding: 15px 30px;
+  padding-bottom: 20px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1;
+  color: #333333;
+  background-color: #F2F2F2;
+}
+
+.modal__form {
+  width: 100%;
+}
+
+.modal__content {
+  padding: 40px 30px;
+  padding-right: 150px;
+}
+
+.fancybox-close-small {
+  height: 60px;
+  margin-right: 15px;
+}
+
+.modal__input,
+.modal__message {
+  width: 100%;
+  display: block;
+  font-size: 16px;
+  border: 1px solid #E0E0E0;
+  border-radius: 3px;
+  
+  &::placeholder {
+    opacity: 1;
+    color: #BDBDBD;
+  }
+}
+
+.modal__input {
+  height: 38px;
+  margin-bottom: 24px;
+  padding: 0 10px;
+}
+
+.modal__message {
+  height: 80px;
+  min-height: 80px;
+  margin-bottom: 36px;
+  padding: 7px 10px;
+}
+
+.modal__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 38px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+  text-align: center;
+  color: #BB6BD9;
+  text-transform: uppercase;
+  border: 2px solid #BB6BD9;
+  border-radius: 3px;
+  .transition();
+  
+  &:hover,
+  &:active {
+    color: #fff;
+    background-color: @violet;
+    .transition();
+  }
+}
+
+.modal__checkbox {
+  display: none;
+}
+
+.modal__label {
+  position: relative;
+  display: block;
+  margin-bottom: 30px;
+  padding-left: 30px;
+  font-size: 16px;
+  line-height: 22px;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #BB6BD9;
+    border-radius: 4px;
+  }
+}
+
+.modal__checkbox:checked + .modal__label::before {
+  background-color: @violet;
+  background-image: url(../img/icons/tick.svg);
+  background-size: 12px 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.modal__comment {
+  margin-bottom: 0;
+  font-size: 13px;
+  
+  a {
+    text-decoration: underline;
+    
+    &:hover,
+    &:active {
+      text-decoration: none;
+      color: @violet;
+    }
+  }
+}
+
+.modal__titles {
+  .reset();
+  list-style: none;
+  display: flex;
+  background-color: #F2F2F2;
+  
+  .ui-tabs-active {
+    background-color: #fff;
+  }
+}
+
+.modal__name {
+  a {
+    display: block;
+    padding: 15px 30px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1;
+    outline: none;
+  }
+}
+
+.modal__login {
+  width: 138px;
+  float: left;
+  margin-right: 30px;
+}
+
+.modal__link {
+  display: block;
+  padding-top: 5px;
+  font-weight: 600;
+  text-align: right;
+  
+  &:hover,
+  &:active {
+    color: @violet;
+    text-decoration: underline;
+  }
+}
