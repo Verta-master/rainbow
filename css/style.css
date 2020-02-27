@@ -2017,6 +2017,8 @@ span.breadcrumbs__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -2348,6 +2350,14 @@ a.pages__link:active {
     margin-left: 10px;
     font-size: 20px;
   }
+  .pages {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .selection__btn {
+    margin-left: 0;
+  }
 }
 @media (max-width: 766px) {
   .promo {
@@ -2485,5 +2495,16 @@ a.pages__link:active {
   }
   .sidebar__menu {
     top: 219px;
+  }
+  .selection {
+    padding: 20px;
+  }
+  .selection__select {
+    margin-right: 0;
+    width: 100%;
+  }
+  .selection__btn {
+    margin-bottom: 0;
+    width: 100%;
   }
 }
