@@ -1,0 +1,31 @@
+.breadcrumbs {
+  margin-bottom: 15px;
+}
+
+.breadcrumbs__link {
+  display: inline-block;
+  vertical-align: baseline;
+  margin-right: 5px;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+}
+
+a.breadcrumbs__link {
+  position: relative;
+  
+  &::after {
+    content: "/";
+    display: inline-block;
+    vertical-align: baseline;
+    margin-left: 5px;
+  }
+  
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
+}
+
+span.breadcrumbs__link {
+  color: #828282;
+}
