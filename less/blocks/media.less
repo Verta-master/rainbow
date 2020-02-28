@@ -68,6 +68,12 @@
   .filter__title {
     cursor: pointer;
   }
+  .card__wrap {
+    justify-content: space-around;
+  }
+  .card__img {
+    margin-right: 0;
+  }
 }
 
 //-----------------------------------
@@ -169,6 +175,16 @@
   }
   .selection__btn {
     margin-left: 0;
+  }
+  .card__wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card__img {
+    margin-bottom: 20px;
+  }
+  .product__item {
+    width: 100%;
   }
 }
 
@@ -312,5 +328,33 @@
   .selection__btn {
     margin-bottom: 0;
     width: 100%;
+  }
+  .card__img {
+    width: 100%;
+    height: auto;
+  }
+  .card__name a {
+    font-weight: 500;
+    font-size: 15px;
+  }
+  .product__item,
+  .card__btns {
+    display: block;
+  }
+  .product__info,
+  .card__click,
+  .card__btn {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .card__price {
+    margin-top: 30px;
+  }
+  .product__img {
+    width: 100%;
+    height: auto;
+  }
+  .product__title {
+    text-align: center;
   }
 }
