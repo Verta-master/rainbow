@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <meta  name="viewport" content="width=device-width,initial-scale=1">
+  <title>радуга-цвет</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa:700|Lato:400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <svg style="display:none">
+    <symbol id="icon-phone">
+      <path d="M12.7824 10.3571C12.7824 10.5179 12.7526 10.7292 12.6931 10.9911C12.6336 11.247 12.5711 11.4494 12.5056 11.5982C12.3806 11.8958 12.0175 12.2113 11.4163 12.5446C10.8568 12.8482 10.3032 13 9.75558 13C9.59487 13 9.43713 12.9911 9.28237 12.9732C9.1276 12.9494 8.95499 12.9107 8.76451 12.8571C8.57999 12.8036 8.4401 12.7619 8.34487 12.7321C8.25558 12.6964 8.09189 12.6339 7.8538 12.5446C7.6157 12.4554 7.46987 12.4018 7.4163 12.3839C6.83296 12.1756 6.31213 11.9286 5.8538 11.6429C5.09784 11.1726 4.31213 10.5298 3.49665 9.71429C2.68118 8.89881 2.03832 8.11309 1.56808 7.35714C1.28237 6.89881 1.03534 6.37798 0.827009 5.79464C0.809152 5.74107 0.75558 5.59524 0.666295 5.35714C0.577009 5.11905 0.514509 4.95536 0.478795 4.86607C0.449033 4.77083 0.407366 4.63095 0.353795 4.44643C0.300223 4.25595 0.261533 4.08333 0.237723 3.92857C0.219866 3.77381 0.210938 3.61607 0.210938 3.45536C0.210938 2.90774 0.362723 2.35417 0.666295 1.79464C0.999628 1.19345 1.3151 0.830357 1.61272 0.705357C1.76153 0.63988 1.96391 0.57738 2.21987 0.517857C2.48177 0.458333 2.69308 0.428571 2.85379 0.428571C2.93713 0.428571 2.99963 0.437499 3.04129 0.455357C3.14844 0.491071 3.30618 0.717262 3.51451 1.13393C3.57999 1.24702 3.66927 1.40774 3.78237 1.61607C3.89546 1.8244 3.99963 2.01488 4.09487 2.1875C4.1901 2.35417 4.28237 2.5119 4.37165 2.66071C4.38951 2.68452 4.4401 2.75893 4.52344 2.88393C4.61272 3.00893 4.6782 3.11607 4.71987 3.20536C4.76153 3.28869 4.78237 3.37202 4.78237 3.45536C4.78237 3.5744 4.69606 3.72321 4.52344 3.90178C4.35677 4.08036 4.17225 4.24405 3.96987 4.39286C3.77344 4.54167 3.58891 4.6994 3.41629 4.86607C3.24963 5.03274 3.16629 5.16964 3.16629 5.27679C3.16629 5.33036 3.18118 5.39881 3.21094 5.48214C3.2407 5.55952 3.26451 5.61905 3.28237 5.66071C3.30618 5.70238 3.34784 5.77381 3.40737 5.875C3.47284 5.97619 3.50856 6.03274 3.51451 6.04464C3.96689 6.86012 4.48475 7.55952 5.06808 8.14286C5.65141 8.72619 6.35082 9.24405 7.1663 9.69643C7.1782 9.70238 7.23475 9.7381 7.33594 9.80357C7.43713 9.8631 7.50856 9.90476 7.55022 9.92857C7.59189 9.94643 7.65141 9.97024 7.7288 10C7.81213 10.0298 7.88058 10.0446 7.93415 10.0446C8.04129 10.0446 8.1782 9.96131 8.34487 9.79464C8.51153 9.62202 8.66927 9.4375 8.81808 9.24107C8.96689 9.03869 9.13058 8.85417 9.30915 8.6875C9.48772 8.51488 9.63653 8.42857 9.75558 8.42857C9.83891 8.42857 9.92225 8.4494 10.0056 8.49107C10.0949 8.53274 10.202 8.59821 10.327 8.6875C10.452 8.77083 10.5264 8.82143 10.5502 8.83929C10.699 8.92857 10.8568 9.02083 11.0234 9.11607C11.1961 9.21131 11.3865 9.31548 11.5949 9.42857C11.8032 9.54167 11.9639 9.63095 12.077 9.69643C12.4937 9.90476 12.7199 10.0625 12.7556 10.1696C12.7734 10.2113 12.7824 10.2738 12.7824 10.3571Z"/>
+    </symbol>
+    <symbol id="icon-basket">
+      <path d="M7.8 20.8C6.37 20.8 5.2 21.97 5.2 23.4C5.2 24.83 6.37 26 7.8 26C9.23 26 10.4 24.83 10.4 23.4C10.4 21.97 9.23 20.8 7.8 20.8ZM0 0V2.6H2.6L7.28 12.48L5.46 15.6C5.33 15.99 5.2 16.51 5.2 16.9C5.2 18.33 6.37 19.5 7.8 19.5H23.4V16.9H8.32C8.19 16.9 8.06 16.77 8.06 16.64V16.51L9.23 14.2999H20.5833C21.6233 14.2999 22.4033 13.7799 22.7933 12.9999L27.4733 4.55C27.7333 4.29 27.7333 4.16 27.7333 3.9C27.7333 3.12 27.2133 2.6 26.4333 2.6H5.46L4.29 0H0ZM20.8 20.8C19.37 20.8 18.2 21.97 18.2 23.4C18.2 24.83 19.37 26 20.8 26C22.23 26 23.4 24.83 23.4 23.4C23.4 21.97 22.23 20.8 20.8 20.8Z"/>
+    </symbol>
+  </svg>
+  
+  <header class="header">
+    <div class="wrapper header__wrap">
+      <a href="#" class="logo">
+        <img src="img/images/logo.png" alt="Logo">
+        <div class="logo__info">
+          <p class="logo__title">радуга-цвет</p>
+          <strong>наборы для творчества</strong>
+        </div>
+      </a>
+      <form action="#" class="search">
+        <input type="text" class="search__input" placeholder="Поиск по сайту">
+        <button type="submit" class="search__btn" title="Поиск">
+          <svg width="15" height="16" viewBox="0 0 15 16" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.10714 9.54464C9.89286 8.75893 10.2857 7.81548 10.2857 6.71429C10.2857 5.61309 9.89286 4.67262 9.10714 3.89286C8.32738 3.10714 7.38691 2.71428 6.28571 2.71428C5.18452 2.71428 4.24107 3.10714 3.45536 3.89286C2.6756 4.67262 2.28571 5.61309 2.28571 6.71429C2.28571 7.81548 2.6756 8.75893 3.45536 9.54464C4.24107 10.3244 5.18452 10.7143 6.28571 10.7143C7.38691 10.7143 8.32738 10.3244 9.10714 9.54464ZM14.8571 14.1429C14.8571 14.4524 14.744 14.7202 14.5179 14.9464C14.2917 15.1726 14.0238 15.2857 13.7143 15.2857C13.3929 15.2857 13.125 15.1726 12.9107 14.9464L9.84822 11.8929C8.78274 12.631 7.59524 13 6.28571 13C5.43452 13 4.61905 12.8363 3.83929 12.5089C3.06548 12.1756 2.39583 11.7292 1.83036 11.1696C1.27083 10.6042 0.824405 9.93452 0.491071 9.16071C0.16369 8.38095 0 7.56548 0 6.71429C0 5.86309 0.16369 5.05059 0.491071 4.27678C0.824405 3.49702 1.27083 2.82738 1.83036 2.26786C2.39583 1.70238 3.06548 1.25595 3.83929 0.928571C4.61905 0.595237 5.43452 0.428571 6.28571 0.428571C7.13691 0.428571 7.94941 0.595237 8.72322 0.928571C9.50298 1.25595 10.1726 1.70238 10.7321 2.26786C11.2976 2.82738 11.744 3.49702 12.0714 4.27678C12.4048 5.05059 12.5714 5.86309 12.5714 6.71429C12.5714 8.02381 12.2024 9.21131 11.4643 10.2768L14.5268 13.3393C14.747 13.5595 14.8571 13.8274 14.8571 14.1429Z"/>
+            </svg>
+        </button>
+      </form>
+      <div class="header__contacts">
+        <a href="tel:+78001234567" class="phone">8 800 123-45-67</a>
+        <a data-fancybox data-src="#call" href="javascript:;" class="phone-call">
+          <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+            <use href="#icon-phone"></use>
+          </svg>
+          <span>Заказать звонок</span>
+        </a>
+      </div>
+      <div class="header__user">
+        <a data-fancybox data-src="#login" href="javascript:;" class="header__login" title="Кабинет">
+          <svg width="20" height="22" viewBox="0 0 20 22" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.8298 9.60714C15.1795 9.71131 15.5106 9.85268 15.8231 10.0312C16.143 10.2098 16.4741 10.4814 16.8164 10.846C17.1661 11.2106 17.4637 11.6421 17.7093 12.1406C17.9548 12.6317 18.1594 13.2716 18.3231 14.0603C18.4868 14.8415 18.5686 15.7195 18.5686 16.6942C18.5686 17.84 18.1966 18.8185 17.4526 19.6295C16.7085 20.4479 15.8119 20.8571 14.7628 20.8571H5.23158C4.18248 20.8571 3.2859 20.4479 2.54185 19.6295C1.79781 18.8185 1.42578 17.84 1.42578 16.6942C1.42578 15.7195 1.50763 14.8415 1.67132 14.0603C1.83501 13.2716 2.03962 12.6317 2.28516 12.1406C2.53069 11.6421 2.82459 11.2106 3.16685 10.846C3.51656 10.4814 3.84766 10.2098 4.16016 10.0312C4.4801 9.85268 4.81492 9.71131 5.16462 9.60714C4.57682 8.67708 4.28292 7.66518 4.28292 6.57143C4.28292 5.79762 4.43173 5.06101 4.72935 4.36161C5.03441 3.65476 5.44364 3.04464 5.95703 2.53125C6.47042 2.01786 7.07682 1.61235 7.77623 1.31473C8.48307 1.00967 9.2234 0.857141 9.99721 0.857141C10.771 0.857141 11.5076 1.00967 12.207 1.31473C12.9139 1.61235 13.524 2.01786 14.0374 2.53125C14.5508 3.04464 14.9563 3.65476 15.2539 4.36161C15.559 5.06101 15.7115 5.79762 15.7115 6.57143C15.7115 7.66518 15.4176 8.67708 14.8298 9.60714ZM13.0218 3.54687C12.1884 2.7061 11.1802 2.28571 9.99721 2.28571C8.81417 2.28571 7.80227 2.7061 6.9615 3.54687C6.12816 4.38021 5.7115 5.38839 5.7115 6.57143C5.7115 7.75446 6.12816 8.76637 6.9615 9.60714C7.80227 10.4405 8.81417 10.8571 9.99721 10.8571C11.1802 10.8571 12.1884 10.4405 13.0218 9.60714C13.8625 8.76637 14.2829 7.75446 14.2829 6.57143C14.2829 5.38839 13.8625 4.38021 13.0218 3.54687ZM14.7628 19.4286C15.4176 19.4286 15.9756 19.1607 16.4369 18.625C16.9057 18.0967 17.1401 17.4531 17.1401 16.6942C17.1401 14.9159 16.8462 13.5134 16.2584 12.4866C15.678 11.4598 14.841 10.9204 13.7472 10.8683C12.6683 11.8132 11.4183 12.2857 9.99721 12.2857C8.57608 12.2857 7.32608 11.8132 6.24721 10.8683C5.15346 10.9204 4.31269 11.4598 3.72489 12.4866C3.14453 13.5134 2.85435 14.9159 2.85435 16.6942C2.85435 17.4531 3.08501 18.0967 3.54632 18.625C4.01507 19.1607 4.57682 19.4286 5.23158 19.4286H14.7628Z"/>
+            <path d="M14.8298 9.60714L14.4071 9.34002L14.0545 9.89792L14.6871 10.0863L14.8298 9.60714ZM15.8231 10.0312L15.575 10.4654L15.5794 10.4678L15.8231 10.0312ZM16.8164 10.846L16.4518 11.1882L16.4556 11.1921L16.8164 10.846ZM17.7093 12.1406L17.2607 12.3616L17.2621 12.3642L17.7093 12.1406ZM18.3231 14.0603L17.8335 14.1619L17.8337 14.1628L18.3231 14.0603ZM17.4526 19.6295L17.0841 19.2914L17.0826 19.2931L17.4526 19.6295ZM2.54185 19.6295L2.91183 19.2931L2.91029 19.2914L2.54185 19.6295ZM1.67132 14.0603L2.16069 14.1628L2.16088 14.1619L1.67132 14.0603ZM2.28516 12.1406L2.73238 12.3642L2.7337 12.3615L2.28516 12.1406ZM3.16685 10.846L2.80599 10.4998L2.80232 10.5038L3.16685 10.846ZM4.16016 10.0312L3.91646 9.59463L3.91209 9.59713L4.16016 10.0312ZM5.16462 9.60714L5.30736 10.0863L5.93988 9.89792L5.58728 9.34002L5.16462 9.60714ZM4.72935 4.36161L4.27028 4.16348L4.26928 4.16583L4.72935 4.36161ZM5.95703 2.53125L5.60348 2.1777L5.60348 2.1777L5.95703 2.53125ZM7.77623 1.31473L7.97201 1.77481L7.97435 1.7738L7.77623 1.31473ZM12.207 1.31473L12.0071 1.77307L12.013 1.77555L12.207 1.31473ZM15.2539 4.36161L14.7931 4.55565L14.7956 4.5615L15.2539 4.36161ZM13.0218 3.54687L12.6666 3.89887L12.6698 3.902L13.0218 3.54687ZM6.9615 3.54687L6.60794 3.19332L6.60794 3.19332L6.9615 3.54687ZM6.9615 9.60714L6.60636 9.95914L6.60952 9.96226L6.9615 9.60714ZM13.0218 9.60714L12.6682 9.25359L13.0218 9.60714ZM16.4369 18.625L16.0629 18.2931L16.0581 18.2987L16.4369 18.625ZM16.2584 12.4866L15.8231 12.7326L15.8244 12.735L16.2584 12.4866ZM13.7472 10.8683L13.771 10.3689L13.5695 10.3593L13.4178 10.4922L13.7472 10.8683ZM6.24721 10.8683L6.57665 10.4922L6.42491 10.3593L6.22343 10.3689L6.24721 10.8683ZM3.72489 12.4866L3.29095 12.2382L3.28961 12.2406L3.72489 12.4866ZM3.54632 18.625L3.1697 18.9539L3.17003 18.9543L3.54632 18.625ZM14.6871 10.0863C15.0006 10.1797 15.2963 10.3061 15.575 10.4654L16.0712 9.59713C15.7249 9.39928 15.3585 9.2429 14.9725 9.12795L14.6871 10.0863ZM15.5794 10.4678C15.8415 10.6141 16.1329 10.8484 16.4519 11.1882L17.1809 10.5038C16.8154 10.1144 16.4446 9.80554 16.0668 9.59465L15.5794 10.4678ZM16.4556 11.1921C16.7664 11.5162 17.0356 11.9045 17.2607 12.3615L18.1578 11.9197C17.8919 11.3798 17.5658 10.9049 17.1772 10.4999L16.4556 11.1921ZM17.2621 12.3642C17.4815 12.8032 17.6749 13.3977 17.8335 14.1619L18.8127 13.9587C18.6439 13.1454 18.4281 12.4602 18.1565 11.917L17.2621 12.3642ZM17.8337 14.1628C17.989 14.9039 18.0686 15.7467 18.0686 16.6942H19.0686C19.0686 15.6923 18.9846 14.7791 18.8125 13.9577L17.8337 14.1628ZM18.0686 16.6942C18.0686 17.7205 17.7398 18.5768 17.0841 19.2914L17.821 19.9675C18.6534 19.0601 19.0686 17.9595 19.0686 16.6942H18.0686ZM17.0826 19.2931C16.4275 20.0137 15.6627 20.3571 14.7628 20.3571V21.3571C15.9612 21.3571 16.9895 20.8821 17.8225 19.9658L17.0826 19.2931ZM14.7628 20.3571H5.23159V21.3571H14.7628V20.3571ZM5.23159 20.3571C4.33177 20.3571 3.56692 20.0137 2.91182 19.2931L2.17188 19.9658C3.00488 20.8821 4.03319 21.3571 5.23159 21.3571V20.3571ZM2.91029 19.2914C2.25461 18.5768 1.92578 17.7205 1.92578 16.6942H0.925781C0.925781 17.9595 1.341 19.0601 2.17342 19.9675L2.91029 19.2914ZM1.92578 16.6942C1.92578 15.7467 2.00541 14.9039 2.16069 14.1628L1.18194 13.9577C1.00984 14.7791 0.925781 15.6923 0.925781 16.6942H1.92578ZM2.16088 14.1619C2.31948 13.3977 2.51288 12.8032 2.73237 12.3642L1.83794 11.917C1.56637 12.4602 1.35054 13.1454 1.18175 13.9587L2.16088 14.1619ZM2.7337 12.3615C2.95979 11.9025 3.22651 11.513 3.53139 11.1882L2.80232 10.5038C2.42268 10.9082 2.1016 11.3817 1.83661 11.9197L2.7337 12.3615ZM3.52769 11.1921C3.85648 10.8493 4.15034 10.6127 4.40823 10.4654L3.91209 9.59713C3.54497 9.80691 3.17663 10.1135 2.80601 10.4999L3.52769 11.1921ZM4.40384 10.4678C4.69193 10.3071 4.99291 10.18 5.30736 10.0863L5.02188 9.12795C4.63693 9.24262 4.26827 9.3983 3.91647 9.59465L4.40384 10.4678ZM5.58728 9.34002C5.04969 8.48939 4.78292 7.57002 4.78292 6.57143H3.78292C3.78292 7.76033 4.10396 8.86477 4.74196 9.87427L5.58728 9.34002ZM4.78292 6.57143C4.78292 5.86365 4.91864 5.19374 5.18943 4.55738L4.26928 4.16583C3.94483 4.92828 3.78292 5.73158 3.78292 6.57143H4.78292ZM5.18842 4.55973C5.46998 3.90735 5.84452 3.35087 6.31059 2.8848L5.60348 2.1777C5.04276 2.73842 4.59885 3.40217 4.27028 4.16348L5.18842 4.55973ZM6.31058 2.8848C6.77658 2.4188 7.32872 2.04855 7.97201 1.77481L7.58045 0.854654C6.82492 1.17615 6.16426 1.61691 5.60348 2.1777L6.31058 2.8848ZM7.97435 1.7738C8.61831 1.49589 9.29118 1.35714 9.99721 1.35714V0.357141C9.15562 0.357141 8.34784 0.523457 7.5781 0.85566L7.97435 1.7738ZM9.99721 1.35714C10.7032 1.35714 11.3717 1.49587 12.0071 1.77303L12.4069 0.856429C11.6436 0.52347 10.8388 0.357141 9.99721 0.357141V1.35714ZM12.013 1.77555C12.6636 2.0495 13.2187 2.41969 13.6838 2.8848L14.3909 2.1777C13.8293 1.61602 13.1641 1.1752 12.4011 0.853913L12.013 1.77555ZM13.6838 2.8848C14.1489 3.34992 14.5191 3.905 14.7931 4.55563L15.7147 4.16758C15.3934 3.40453 14.9526 2.73937 14.3909 2.1777L13.6838 2.8848ZM14.7956 4.5615C15.0728 5.19694 15.2115 5.86541 15.2115 6.57143H16.2115C16.2115 5.72983 16.0452 4.92508 15.7122 4.16171L14.7956 4.5615ZM15.2115 6.57143C15.2115 7.57002 14.9447 8.48939 14.4071 9.34002L15.2525 9.87427C15.8905 8.86477 16.2115 7.76033 16.2115 6.57143H15.2115ZM13.3769 3.1949C12.4497 2.25946 11.3137 1.78571 9.99721 1.78571V2.78571C11.0468 2.78571 11.9271 3.15274 12.6666 3.89885L13.3769 3.1949ZM9.99721 1.78571C8.68081 1.78571 7.54195 2.25931 6.60794 3.19332L7.31505 3.90043C8.06259 3.15289 8.94754 2.78571 9.99721 2.78571V1.78571ZM6.60794 3.19332C5.68044 4.12083 5.2115 5.25636 5.2115 6.57143H6.2115C6.2115 5.52043 6.57589 4.63959 7.31505 3.90043L6.60794 3.19332ZM5.2115 6.57143C5.2115 7.8864 5.6803 9.02478 6.60637 9.95912L7.31662 9.25516C6.57603 8.50796 6.2115 7.62253 6.2115 6.57143H5.2115ZM6.60952 9.96226C7.54386 10.8883 8.68224 11.3571 9.99721 11.3571V10.3571C8.94611 10.3571 8.06068 9.99261 7.31347 9.25202L6.60952 9.96226ZM9.99721 11.3571C11.3123 11.3571 12.4478 10.8882 13.3753 9.9607L12.6682 9.25359C11.929 9.99275 11.0482 10.3571 9.99721 10.3571V11.3571ZM13.3753 9.9607C14.3093 9.02669 14.7829 7.88783 14.7829 6.57143H13.7829C13.7829 7.6211 13.4158 8.50605 12.6682 9.25359L13.3753 9.9607ZM14.7829 6.57143C14.7829 5.25492 14.3092 4.11891 13.3737 3.19175L12.6698 3.902C13.4159 4.6415 13.7829 5.52187 13.7829 6.57143H14.7829ZM14.7628 19.9286C15.5758 19.9286 16.2681 19.5873 16.8158 18.9513L16.0581 18.2987C15.6832 18.7341 15.2594 18.9286 14.7628 18.9286V19.9286ZM16.8109 18.9569C17.3672 18.3299 17.6401 17.5655 17.6401 16.6942H16.6401C16.6401 17.3407 16.4442 17.8635 16.0629 18.2931L16.8109 18.9569ZM17.6401 16.6942C17.6401 14.8693 17.3398 13.3694 16.6923 12.2382L15.8244 12.735C16.3525 13.6574 16.6401 14.9625 16.6401 16.6942H17.6401ZM16.6937 12.2406C16.0366 11.0781 15.0516 10.4299 13.771 10.3689L13.7234 11.3677C14.6303 11.4109 15.3194 11.8416 15.8231 12.7326L16.6937 12.2406ZM13.4178 10.4922C12.4292 11.3581 11.2959 11.7857 9.99721 11.7857V12.7857C11.5408 12.7857 12.9075 12.2684 14.0766 11.2444L13.4178 10.4922ZM9.99721 11.7857C8.6985 11.7857 7.56527 11.3581 6.57665 10.4922L5.91777 11.2444C7.08689 12.2684 8.45366 12.7857 9.99721 12.7857V11.7857ZM6.22343 10.3689C4.94326 10.4298 3.95545 11.0774 3.29096 12.2382L4.15882 12.735C4.66992 11.8422 5.36366 11.4109 6.27099 11.3677L6.22343 10.3689ZM3.28961 12.2406C2.65061 13.3711 2.35435 14.8701 2.35435 16.6942H3.35435C3.35435 14.9618 3.63845 13.6557 4.16017 12.7326L3.28961 12.2406ZM2.35435 16.6942C2.35435 17.5633 2.62205 18.3267 3.1697 18.9539L3.92293 18.2961C3.54796 17.8667 3.35435 17.3429 3.35435 16.6942H2.35435ZM3.17003 18.9543C3.7244 19.5878 4.41906 19.9286 5.23159 19.9286V18.9286C4.73459 18.9286 4.30574 18.7336 3.92261 18.2957L3.17003 18.9543ZM5.23159 19.9286H14.7628V18.9286H5.23159V19.9286Z"/>
+          </svg>
+        </a>
+        <a href="#" class="header__cart" title="Корзина">
+          <svg width="28" height="26" viewBox="0 0 28 26" xmlns="http://www.w3.org/2000/svg">
+            <use href="#icon-basket"></use>
+          </svg>
+          <span class="header__price">5 870 Р</span>
+          <span class="header__number">8</span>
+        </a>
+      </div>
+    </div>
+  </header>
+  <nav class="menu">
+    <div class="wrapper menu__wrap">
+      <button type="button" class="menu__btn"></button>
+      <a href="#" class="menu__catalog">Каталог товаров</a>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="#" class="menu__link">О нас</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Контакты</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Акции</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Новости</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Доставка и оплата</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Условия возврата</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Гарантии</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Оптовикам</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <main>
+    <div class="wrapper wrapper--columns">
+      <aside class="sidebar">
+        <nav class="sidebar__menu">
+          <ul class="sidebar__list">
+            <li class="sidebar__item">
+              <a href="#" class="sidebar__link">Картины по номерам</a>
+              <button type="button" class="sidebar__btn">
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.5" d="M4.5 1L8.74264 5.24264L4.5 9.48528" stroke-width="2"/>
+                </svg>
+              </button>
+              <div class="sidebar__drop">
+                <ul class="sidebar__sublist">
+                  <li class="sidebar__subitem"><a href="#">Все <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Цветы <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Животные <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Люди <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Пейзажи <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Здания и сооружения <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Для детей <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Природа <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Живопись <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Птицы <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Товары со скидкой <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">На холсте <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Без смешивания <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Для взрослых <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Мультфильмы <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Триптихи <span>[104]</span></a></li>
+                </ul>
+                <ul class="sidebar__sublist">
+                  <li class="sidebar__subitem"><a href="#">Птицы <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Цветы <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Животные <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Люди <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Пейзажи <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Здания и сооружения <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Для детей <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Природа <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Живопись <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Птицы <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Товары со скидкой <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">На холсте <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Без смешивания <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Для взрослых <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Мультфильмы <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Триптихи <span>[104]</span></a></li>
+                </ul>
+                <ul class="sidebar__sublist">
+                  <li class="sidebar__subitem"><a href="#">Птицы <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Цветы <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Животные <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Люди <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Пейзажи <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Здания и сооружения <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Для детей <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Природа <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Живопись <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Птицы <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Товары со скидкой <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">На холсте <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Без смешивания <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Для взрослых <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Мультфильмы <span>[104]</span></a></li>
+                  <li class="sidebar__subitem"><a href="#">Триптихи <span>[104]</span></a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="sidebar__item">
+              <a href="#" class="sidebar__link">Алмазная мозаика</a>
+              <button type="button" class="sidebar__btn">
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.5" d="M4.5 1L8.74264 5.24264L4.5 9.48528" stroke-width="2"/>
+                </svg>
+              </button>
+            </li>
+            <li class="sidebar__item">
+              <a href="#" class="sidebar__link">Вышивка лентами</a>
+              <button type="button" class="sidebar__btn">
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.5" d="M4.5 1L8.74264 5.24264L4.5 9.48528" stroke-width="2"/>
+                </svg>
+              </button>
+            </li>
+            <li class="sidebar__item">
+              <a href="#" class="sidebar__link">Картины шерстью</a>
+              <button type="button" class="sidebar__btn">
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.5" d="M4.5 1L8.74264 5.24264L4.5 9.48528" stroke-width="2"/>
+                </svg>
+              </button>
+            </li>
+            <li class="sidebar__item">
+              <a href="#" class="sidebar__link">Наборы для шитья</a>
+              <button type="button" class="sidebar__btn">
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.5" d="M4.5 1L8.74264 5.24264L4.5 9.48528" stroke-width="2"/>
+                </svg>
+              </button>
+            </li>
+            <li class="sidebar__item">
+              <a href="#" class="sidebar__link">Багеты для картин</a>
+              <button type="button" class="sidebar__btn">
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.5" d="M4.5 1L8.74264 5.24264L4.5 9.48528" stroke-width="2"/>
+                </svg>
+              </button>
+            </li>
+            <li class="sidebar__item">
+              <a href="#" class="sidebar__link">Вышивка крестиком</a>
+              <button type="button" class="sidebar__btn">
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.5" d="M4.5 1L8.74264 5.24264L4.5 9.48528" stroke-width="2"/>
+                </svg>
+              </button>
+            </li>
+            <li class="sidebar__item">
+              <a href="#" class="sidebar__link">Аксесуары</a>
+              <button type="button" class="sidebar__btn">
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.5" d="M4.5 1L8.74264 5.24264L4.5 9.48528" stroke-width="2"/>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </nav>
+        
+        <form action="#" class="filter">
+          <div class="filter__block">
+            <p class="filter__title">Производители</p>
+            <div class="filter__drop">
+              <input type="checkbox" id="checkbox1" class="checkbox">
+              <label for="checkbox1" class="checkbox-label">Menglei</label>
+              <input type="checkbox" id="checkbox2" class="checkbox" checked>
+              <label for="checkbox2" class="checkbox-label">Schipper</label>
+              <input type="checkbox" id="checkbox3" class="checkbox">
+              <label for="checkbox3" class="checkbox-label">ТМ "Цветной"</label>
+              <input type="checkbox" id="checkbox4" class="checkbox">
+              <label for="checkbox4" class="checkbox-label">Robotime</label>
+              <input type="checkbox" id="checkbox5" class="checkbox">
+              <label for="checkbox5" class="checkbox-label">Hobbart</label>
+              <input type="checkbox" id="checkbox6" class="checkbox">
+              <label for="checkbox6" class="checkbox-label">Dimensions</label>
+              <input type="checkbox" id="checkbox7" class="checkbox">
+              <label for="checkbox7" class="checkbox-label">Ravensburger</label>
+            </div>
+          </div>
+          
+          <div class="filter__block filter__block--yellow">
+            <p class="filter__title">Виды раскрасок</p>
+            <div class="filter__drop">
+              <input type="checkbox" id="checkbox8" class="checkbox">
+              <label for="checkbox8" class="checkbox-label">Акварельные</label>
+              <input type="checkbox" id="checkbox9" class="checkbox">
+              <label for="checkbox9" class="checkbox-label">Акриловые</label>
+              <input type="checkbox" id="checkbox10" class="checkbox">
+              <label for="checkbox10" class="checkbox-label">Масляные</label>
+              <input type="checkbox" id="checkbox11" class="checkbox">
+              <label for="checkbox11" class="checkbox-label">Карандашами</label>
+            </div>
+          </div>
+        </form>
+        
+        <div class="news">
+          <a href="#" class="news__title">Новости</a>
+          <ul class="news__list">
+            <li class="news__item">
+              <a href="#" class="news__link">
+                <div class="news__top">
+                  <figure class="news__img">
+                    <img src="img/images/img-1.jpg" alt="">
+                  </figure>
+                  <div class="news__info">
+                    <time datetime="2020-02-14">14.02.2020</time>
+                    <p class="news__name">Новая коллекция картинок «Совушки»</p>
+                  </div>
+                </div>
+                <p>Просто удивительная новая коллекция картинок «Совушки». Вы ещё не видели? Обязательно посмотрите!</p>
+              </a>
+            </li>
+            <li class="news__item">
+              <a href="#" class="news__link">
+                <div class="news__top">
+                  <figure class="news__img">
+                    <img src="img/images/img-2.jpg" alt="">
+                  </figure>
+                  <div class="news__info">
+                    <time datetime="2020-02-14">14.02.2020</time>
+                    <p class="news__name">Новая коллекция картинок «Совушки»</p>
+                  </div>
+                </div>
+                <p>Просто удивительная новая коллекция картинок «Совушки». Вы ещё не видели? Обязательно посмотрите!</p>
+              </a>
+            </li>
+            <li class="news__item">
+              <a href="#" class="news__link">
+                <div class="news__top">
+                  <figure class="news__img">
+                    <img src="img/images/img-3.jpg" alt="">
+                  </figure>
+                  <div class="news__info">
+                    <time datetime="2020-02-14">14.02.2020</time>
+                    <p class="news__name">Новая коллекция картинок «Совушки»</p>
+                  </div>
+                </div>
+                <p>Просто удивительная новая коллекция картинок «Совушки». Вы ещё не видели? Обязательно посмотрите!</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      
+      <div class="wrapper__content">
+        <nav class="breadcrumbs">
+          <a href="#" class="breadcrumbs__link">Главная</a>
+          <a href="#" class="breadcrumbs__link">Картины по номерам</a>
+          <span class="breadcrumbs__link">Звёздная ночь</span>
+        </nav>
+        
+        <section class="card">
+          <h1 class="title">Картина по номерам Звездное небо</h1>
+          <div class="card__wrap">
+            <figure class="card__img">
+              <img src="img/images/img-1-big.jpg" alt="Звездное небо">
+            </figure>
+            <div class="card__info">
+              <div class="card__tabs" id="cards">
+                <ul class="card__title">
+                  <li class="card__name"><a href="#cards-1">Характеристики</a></li>
+                  <li class="card__name"><a href="#cards-2">В комплекте</a></li>
+                </ul>
+                <div class="card__field" id="cards-1">
+                  <table class="catalog__table">
+                    <tr>
+                      <td>Артикул</td>
+                      <td>G192</td>
+                    </tr>
+                    <tr>
+                      <td>Размер</td>
+                      <td>40x50</td>
+                    </tr>
+                    <tr>
+                      <td>Производитель</td>
+                      <td>“ТМ Цветной”</td>
+                    </tr>
+                    <tr>
+                      <td>Сложность</td>
+                      <td>
+                        <img src="img/icons/star.png" alt="rating">
+                        <img src="img/icons/star.png" alt="rating">
+                        <img src="img/icons/star.png" alt="rating">
+                        <img src="img/icons/star-inactive.png" alt="rating">
+                        <img src="img/icons/star-inactive.png" alt="rating">
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="card__field" id="cards-2">
+                  Информация
+                </div>
+              </div>
+              <div class="card__bottom">
+                <p class="card__text">Заказать можно по телефону  -  <a href="tel:+74956416749">8 (495) 641-67-49</a></p>
+                <form action="" class="card__form">
+                  <div class="card__btns">
+                    <p class="card__presence">В наличии</p>
+                    <p class="card__presence card__presence--no hidden">Отсутствует</p>
+                    <a href="#" class="card__btn">
+                      <svg width="28" height="26" viewBox="0 0 28 26" xmlns="http://www.w3.org/2000/svg">
+                        <use href="#icon-basket"></use>
+                      </svg>
+                      <span>В корзину</span>
+                    </a>
+                  </div>
+                  <div class="card__btns">
+                    <p class="card__price">1 299р. <i>цена:</i></p>
+                    <a href="#" class="btn card__click">Оформить в один клик</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section class="product">
+          <p class="title">Дополнительные аксессуары</p>
+          <ul class="product__list">
+            <li class="product__item">
+              <a href="#" class="product__img">
+                <img src="img/images/img-6.jpg" alt="Дополнительные аксессуары">
+              </a>
+              <div class="product__info">
+                <a href="#" class="product__title">Лак акриловый матовый</a>
+                <form action="#" class="catalog__form">
+                  <div class="catalog__btns">
+                    <div class="catalog__price">1 299р.</div>
+                    <a href="#" class="btn catalog__btn">
+                      <svg width="28" height="26" viewBox="0 0 28 26" xmlns="http://www.w3.org/2000/svg">
+                        <use href="#icon-basket"></use>
+                      </svg>
+                      <span>В корзину</span>
+                    </a>
+                  </div>
+                </form>
+              </div>
+            </li>
+            <li class="product__item">
+              <a href="#" class="product__img">
+                <img src="img/images/img-7.jpg" alt="Дополнительные аксессуары">
+              </a>
+              <div class="product__info">
+                <a href="#" class="product__title">Мольберт "Бук" настольный</a>
+                <form action="#" class="catalog__form">
+                  <div class="catalog__btns">
+                    <div class="catalog__price">1 299р.</div>
+                    <a href="#" class="btn catalog__btn">
+                      <svg width="28" height="26" viewBox="0 0 28 26" xmlns="http://www.w3.org/2000/svg">
+                        <use href="#icon-basket"></use>
+                      </svg>
+                      <span>В корзину</span>
+                    </a>
+                  </div>
+                </form>
+              </div>
+            </li>
+            <li class="product__item">
+              <a href="#" class="product__img">
+                <img src="img/images/img-7.jpg" alt="Дополнительные аксессуары">
+              </a>
+              <div class="product__info">
+                <a href="#" class="product__title">Мольберт "Бук" настольный</a>
+                <form action="#" class="catalog__form">
+                  <div class="catalog__btns">
+                    <div class="catalog__price">1 299р.</div>
+                    <a href="#" class="btn catalog__btn">
+                      <svg width="28" height="26" viewBox="0 0 28 26" xmlns="http://www.w3.org/2000/svg">
+                        <use href="#icon-basket"></use>
+                      </svg>
+                      <span>В корзину</span>
+                    </a>
+                  </div>
+                </form>
+              </div>
+            </li>
+            <li class="product__item">
+              <a href="#" class="product__img">
+                <img src="img/images/img-6.jpg" alt="Дополнительные аксессуары">
+              </a>
+              <div class="product__info">
+                <a href="#" class="product__title">Лак акриловый матовый</a>
+                <form action="#" class="catalog__form">
+                  <div class="catalog__btns">
+                    <div class="catalog__price">1 299р.</div>
+                    <a href="#" class="btn catalog__btn">
+                      <svg width="28" height="26" viewBox="0 0 28 26" xmlns="http://www.w3.org/2000/svg">
+                        <use href="#icon-basket"></use>
+                      </svg>
+                      <span>В корзину</span>
+                    </a>
+                  </div>
+                </form>
+              </div>
+            </li>
+          </ul>
+        </section>
+        
+        <section class="catalog">
+          <p class="title">Похожие раскраски</p>
+          <ul class="catalog__list">
+            <li class="catalog__item">
+              <a href="#" class="catalog__img">
+                <img src="img/images/img-1.jpg" alt="Звёздная ночь">
+              </a>
+              <a href="#" class="catalog__tag">Картина по номерам</a>
+              <a href="#" class="catalog__title">Звёздная ночь</a>
+              <form action="#" class="catalog__form">
+                <table class="catalog__table">
+                  <tr>
+                    <td>Размер</td>
+                    <td>40x50</td>
+                  </tr>
+                  <tr>
+                    <td>Производитель</td>
+                    <td>“ТМ Цветной”</td>
+                  </tr>
+                  <tr>
+                    <td>Сложность</td>
+                    <td>
+                      <img src="img/icons/star.png" alt="rating">
+                      <img src="img/icons/star.png" alt="rating">
+                      <img src="img/icons/star.png" alt="rating">
+                      <img src="img/icons/star-inactive.png" alt="rating">
+                      <img src="img/icons/star-inactive.png" alt="rating">
+                    </td>
+                  </tr>
+                </table>
+                <div class="catalog__btns">
+                  <div class="catalog__price">1 299р.</div>
+                  <a href="#" class="btn catalog__btn">
+                    <svg width="28" height="26" viewBox="0 0 28 26" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-basket"></use>
+                    </svg>
+                    <span>В корзину</span>
+                  </a>
+                </div>
+              </form>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__img">
+                <img src="img/images/img-2.jpg" alt="Звёздная ночь">
+              </a>
+              <a href="#" class="catalog__tag">Картина по номерам</a>
+              <a href="#" class="catalog__title">Звёздная ночь</a>
+              <form action="#" class="catalog__form">
+                <table class="catalog__table">
+                  <tr>
+                    <td>Размер</td>
+                    <td>40x50</td>
+                  </tr>
+                  <tr>
+                    <td>Производитель</td>
+                    <td>“ТМ Цветной”</td>
+                  </tr>
+                  <tr>
+                    <td>Сложность</td>
+                    <td>
+                      <img src="img/icons/star.png" alt="rating">
+                      <img src="img/icons/star.png" alt="rating">
+                      <img src="img/icons/star.png" alt="rating">
+                      <img src="img/icons/star-inactive.png" alt="rating">
+                      <img src="img/icons/star-inactive.png" alt="rating">
+                    </td>
+                  </tr>
+                </table>
+                <div class="catalog__btns">
+                  <div class="catalog__price">1 299р.</div>
+                  <a href="#" class="btn catalog__btn">
+                    <svg width="28" height="26" viewBox="0 0 28 26" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-basket"></use>
+                    </svg>
+                    <span>В корзину</span>
+                  </a>
+                </div>
+              </form>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__img">
+                <img src="img/images/img-3.jpg" alt="Звёздная ночь">
+              </a>
+              <a href="#" class="catalog__tag">Картина по номерам</a>
+              <a href="#" class="catalog__title">Звёздная ночь</a>
+              <form action="#" class="catalog__form">
+                <table class="catalog__table">
+                  <tr>
+                    <td>Размер</td>
+                    <td>40x50</td>
+                  </tr>
+                  <tr>
+                    <td>Производитель</td>
+                    <td>“ТМ Цветной”</td>
+                  </tr>
+                  <tr>
+                    <td>Сложность</td>
+                    <td>
+                      <img src="img/icons/star.png" alt="rating">
+                      <img src="img/icons/star.png" alt="rating">
+                      <img src="img/icons/star.png" alt="rating">
+                      <img src="img/icons/star-inactive.png" alt="rating">
+                      <img src="img/icons/star-inactive.png" alt="rating">
+                    </td>
+                  </tr>
+                </table>
+                <div class="catalog__btns">
+                  <div class="catalog__price">1 299р.</div>
+                  <a href="#" class="btn catalog__btn">
+                    <svg width="28" height="26" viewBox="0 0 28 26" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-basket"></use>
+                    </svg>
+                    <span>В корзину</span>
+                  </a>
+                </div>
+              </form>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__img">
+                <img src="img/images/img-3.jpg" alt="Звёздная ночь">
+              </a>
+              <a href="#" class="catalog__tag">Картина по номерам</a>
+              <a href="#" class="catalog__title">Звёздная ночь</a>
+              <form action="#" class="catalog__form">
+                <table class="catalog__table">
+                  <tr>
+                    <td>Размер</td>
+                    <td>40x50</td>
+                  </tr>
+                  <tr>
+                    <td>Производитель</td>
+                    <td>“ТМ Цветной”</td>
+                  </tr>
+                  <tr>
+                    <td>Сложность</td>
+                    <td>
+                      <img src="img/icons/star.png" alt="rating">
+                      <img src="img/icons/star.png" alt="rating">
+                      <img src="img/icons/star.png" alt="rating">
+                      <img src="img/icons/star-inactive.png" alt="rating">
+                      <img src="img/icons/star-inactive.png" alt="rating">
+                    </td>
+                  </tr>
+                </table>
+                <div class="catalog__btns">
+                  <div class="catalog__price">1 299р.</div>
+                  <a href="#" class="btn catalog__btn">
+                    <svg width="28" height="26" viewBox="0 0 28 26" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-basket"></use>
+                    </svg>
+                    <span>В корзину</span>
+                  </a>
+                </div>
+              </form>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__img">
+                <img src="img/images/img-1.jpg" alt="Звёздная ночь">
+              </a>
+              <a href="#" class="catalog__tag">Картина по номерам</a>
+              <a href="#" class="catalog__title">Звёздная ночь</a>
+              <form action="#" class="catalog__form">
+                <table class="catalog__table">
+                  <tr>
+                    <td>Размер</td>
+                    <td>40x50</td>
+                  </tr>
+                  <tr>
+                    <td>Производитель</td>
+                    <td>“ТМ Цветной”</td>
+                  </tr>
+                  <tr>
+                    <td>Сложность</td>
+                    <td>
+                      <img src="img/icons/star.png" alt="rating">
+                      <img src="img/icons/star.png" alt="rating">
+                      <img src="img/icons/star.png" alt="rating">
+                      <img src="img/icons/star-inactive.png" alt="rating">
+                      <img src="img/icons/star-inactive.png" alt="rating">
+                    </td>
+                  </tr>
+                </table>
+                <div class="catalog__btns">
+                  <div class="catalog__price">1 299р.</div>
+                  <a href="#" class="btn catalog__btn">
+                    <svg width="28" height="26" viewBox="0 0 28 26" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-basket"></use>
+                    </svg>
+                    <span>В корзину</span>
+                  </a>
+                </div>
+              </form>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__img">
+                <img src="img/images/img-2.jpg" alt="Звёздная ночь">
+              </a>
+              <a href="#" class="catalog__tag">Картина по номерам</a>
+              <a href="#" class="catalog__title">Звёздная ночь</a>
+              <form action="#" class="catalog__form">
+                <table class="catalog__table">
+                  <tr>
+                    <td>Размер</td>
+                    <td>40x50</td>
+                  </tr>
+                  <tr>
+                    <td>Производитель</td>
+                    <td>“ТМ Цветной”</td>
+                  </tr>
+                  <tr>
+                    <td>Сложность</td>
+                    <td>
+                      <img src="img/icons/star.png" alt="rating">
+                      <img src="img/icons/star.png" alt="rating">
+                      <img src="img/icons/star.png" alt="rating">
+                      <img src="img/icons/star-inactive.png" alt="rating">
+                      <img src="img/icons/star-inactive.png" alt="rating">
+                    </td>
+                  </tr>
+                </table>
+                <div class="catalog__btns">
+                  <div class="catalog__price">1 299р.</div>
+                  <a href="#" class="btn catalog__btn">
+                    <svg width="28" height="26" viewBox="0 0 28 26" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-basket"></use>
+                    </svg>
+                    <span>В корзину</span>
+                  </a>
+                </div>
+              </form>
+            </li>
+          </ul>
+        </section>
+        
+        <section class="benefits">
+          <ul class="benefits__list">
+            <li class="benefits__item">
+              <figure class="benefits__img">
+                <img src="img/icons/delivery.png" alt="Бесплатная доставка">
+              </figure>
+              <div class="benefits__info">
+                <p>Бесплатная доставка<br>от 2 000р по Москве<br>и Санкт-Петербургу</p>
+              </div>
+            </li>
+            <li class="benefits__item">
+              <figure class="benefits__img">
+                <img src="img/icons/clock.png" alt="Время работы магазина">
+              </figure>
+              <div class="benefits__info">
+                <p>Время работы магазина:<br>пн-пт: с 10:00 до 18:00</p>
+              </div>
+            </li>
+            <li class="benefits__item">
+              <figure class="benefits__img">
+                <img src="img/icons/russia.png" alt="Доставка по всей России">
+              </figure>
+              <div class="benefits__info">
+                <p>Доставка по всей<br>России</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </main>
+  
+  <footer class="footer">
+    <div class="wrapper footer__wrap">
+      <div class="footer__block footer__block--logo">
+        <div class="logo">
+          <img src="img/images/logo.png" alt="Logo">
+          <div class="logo__info">
+            <p class="logo__title">радуга-цвет</p>
+            <strong>наборы для творчества</strong>
+          </div>
+        </div>
+        <div class="footer__text">
+          <p>Радуга-Цвет  интернет магазин с товарами для хобби и творчества. Идеально подходит для подарка, в нем есть все необходимое и не требуется специальных художественных навыков.</p>
+        </div>
+        <ul class="social">
+          <li class="social__item">
+            <a href="#" class="social__link social__link--in" title="Instagram"></a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link social__link--fb" title="Facebook"></a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link social__link--ok" title="Odnoklassniki"></a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link social__link--vk" title="VKontakte"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__block footer__block--info">
+        <p class="footer__title">Информация<span>&rsaquo;</span></p>
+        <ul class="footer__menu">
+          <li><a href="#">О нас</a></li>
+          <li><a href="#">Контакты</a></li>
+          <li><a href="#">Акции</a></li>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Доставка и оплата</a></li>
+          <li><a href="#">Условия возврата</a></li>
+          <li><a href="#">Гарантии</a></li>
+          <li><a href="#">Оптовикам</a></li>
+        </ul>
+      </div>
+      <div class="footer__block footer__block--catalog">
+        <p class="footer__title">Каталог<span>&rsaquo;</span></p>
+        <ul class="footer__menu">
+          <li><a href="#">Картины по номерам</a></li>
+          <li><a href="#">Алмазная мозаика</a></li>
+          <li><a href="#">Вышивка лентами</a></li>
+          <li><a href="#">Картины шерстью</a></li>
+          <li><a href="#">Наборы для шитья</a></li>
+          <li><a href="#">Багеты для картин</a></li>
+          <li><a href="#">Вышивка крестиком</a></li>
+          <li><a href="#">Аксесуары</a></li>
+        </ul>
+      </div>
+      <div class="footer__block footer__block--contacts">
+        <a href="tel:+78001234567" class="phone">8 800 123-45-67</a>
+        <a data-fancybox data-src="#call" href="javascript:;" class="phone-call">
+          <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+            <use href="#icon-phone"></use>
+          </svg>
+          <span>Заказать звонок</span>
+        </a>
+        <p>Мы работаем пн-пт с 10:00 до 18:00, сб-вс выходные</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="wrapper">
+        <span>Все права защищены © 2020</span>
+      </div>
+    </div>
+  </footer>
+  
+  <a href="#" class="btn-top">
+    <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M22.5001 12.5L12.2471 2.24695L1.99403 12.5" stroke-width="3"/>
+    </svg>
+  </a>
+  
+  <!-- Modal windows -->
+  <div style="display: none;" id="call" class="modal">
+    <p class="modal__title">Заказать обратный звонок</p>
+    <div class="modal__content">
+      <form action="#" class="modal__form">
+        <input type="text" class="modal__input" placeholder="Имя">
+        <input type="tel" class="modal__input" placeholder="Телефон">
+        <textarea class="modal__message" placeholder="Комментарий"></textarea>
+        <input type="checkbox" id="check" class="modal__checkbox">
+        <label for="check" class="modal__label">Я не робот</label>
+        <button type="submit" class="modal__btn">отправить</button>
+        <p class="modal__comment">Ознакомлен с <a href="#">политикой конфиденциальности</a>.</p>
+      </form>
+    </div>
+  </div>
+  
+  <div style="display: none;" id="login" class="modal">
+    <div class="modal__tabs" id="tabs">
+      <ul class="modal__titles">
+        <li class="modal__name"><a href="#tabs-1">Вход</a></li>
+        <li class="modal__name"><a href="#tabs-2">Регистрация</a></li>
+      </ul>
+      <div class="modal__field" id="tabs-1">
+        <div class="modal__content">
+          <input type="text" class="modal__input" placeholder="Логин">
+          <input type="password" class="modal__input" placeholder="Пароль">
+          <input type="checkbox" id="check1" class="modal__checkbox" checked>
+          <label for="check1" class="modal__label">Запомнить меня на этом компьютере</label>
+          <button type="submit" class="modal__btn modal__login">Вход</button>
+          <a href="#" class="modal__link">Забыли пароль?</a>
+        </div>
+      </div>
+      <div class="modal__field" id="tabs-2">
+        <div class="modal__content">
+          <input type="text" class="modal__input" placeholder="Имя">
+          <input type="text" class="modal__input" placeholder="Фамилия">
+          <input type="text" class="modal__input" placeholder="Логин">
+          <input type="password" class="modal__input" placeholder="Пароль">
+          <input type="password" class="modal__input" placeholder="Подтверждение пароля">
+          <input type="email" class="modal__input" placeholder="e-mail">
+          <input type="checkbox" id="check2" class="modal__checkbox">
+          <label for="check2" class="modal__label">Я согласен на обработку персональных данных.</label>
+          <button type="submit" class="modal__btn">Регистрация</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+
+  <!-- Slider -->
+  <script>
+    var mySwiper = new Swiper ('.tag__slider', {
+      navigation: {
+        nextEl: '.tag__next',
+        prevEl: '.tag__prev',
+      },
+      simulateTouch: false,
+      preventClicks: false,
+      preventClicksPropagation: false,
+      slidesPerView: 'auto',
+      spaceBetween: 10,
+    });
+  </script>
+  
+  <!-- Tabs -->
+  <script>
+    $(function() {
+      $("#tabs").tabs();
+    });
+    
+    $(function() {
+      $("#cards").tabs();
+    });
+  </script>
+</body>
+</html>

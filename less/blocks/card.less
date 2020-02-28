@@ -1,0 +1,173 @@
+.card {
+  .catalog__table {
+    td {
+      height: 38px;
+      border-bottom: 1px solid #F2F2F2;
+      vertical-align: bottom;
+    }
+  }
+}
+
+.card__wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.card__img {
+  width: 400px;
+  height: 400px;
+}
+
+.card__info {
+  width: 370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card__bottom {
+  margin-top: auto;
+}
+
+.card__title {
+  .reset();
+  list-style: none;
+  display: flex;
+  
+  .ui-tabs-active {
+    color: #BB6BD9;
+    background-color: rgba(187,107,217,0.2);
+  }
+}
+
+.card__name {
+  width: 50%;
+  background-color: #F2F2F2;
+  border-radius: 20px 20px 0px 0px;
+  
+  a {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    font-weight: bold;
+    outline: none;
+  }
+}
+
+.card__field {
+  padding-top: 20px;
+}
+
+.card__text {
+  color: #828282;
+  
+  a {
+    font-weight: bold;
+    color: #4F4F4F;
+    .transition();
+    
+    &:hover,
+    &:active {
+      color: @violet;
+      .transition();
+    }
+  }
+}
+
+.card__btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.card__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  height: 38px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #1FA97B;
+  border: 2px solid #1FA97B;
+  border-radius: 3px;
+  .transition();
+  
+  svg {
+    display: block;
+    width: 22px;
+    height: 20px;
+    margin-right: 15px;
+    fill: #1FA97B;
+    .transition();
+  }
+  
+  &:hover,
+  &:active {
+    color: #fff;
+    background-color: @green;
+    .transition();
+    
+    svg {
+      fill: #fff;
+      .transition();
+    }
+  }
+}
+
+.card__click {
+  width: 210px;
+  height: 38px;
+  font-weight: 500;
+}
+
+.card__price {
+  position: relative;
+  margin: 0;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1;
+  color: #333333;
+  
+  i {
+    position: absolute;
+    bottom: 110%;
+    left: 0;
+    font-size: 14px;
+    font-style: normal;
+  }
+}
+
+.card__presence {
+  position: relative;
+  margin: 0;
+  padding-left: 20px;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #333;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: @green;
+  }
+  
+  &--no::before {
+    background-color: red;
+  }
+}
+
+.hidden {
+  display: none;
+}
