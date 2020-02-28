@@ -1035,6 +1035,7 @@ h3,
   padding: 0;
   list-style: none;
   width: 270px;
+  min-width: 270px;
   padding: 15px 30px;
   padding-bottom: 19px;
 }
@@ -2831,5 +2832,8 @@ a.pages__link:active {
   }
   .product__title {
     text-align: center;
+  }
+  .promo__title {
+    max-width: 100%;
   }
 }
