@@ -2158,6 +2158,13 @@ a.pages__link:active {
 .tag__next {
   right: 0;
 }
+.card {
+  margin-top: 25px;
+  margin-bottom: 45px;
+}
+.card .catalog__table {
+  margin-bottom: 20px;
+}
 .card .catalog__table td {
   height: 38px;
   border-bottom: 1px solid #F2F2F2;
@@ -2167,18 +2174,17 @@ a.pages__link:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding: 20px;
   background-color: #fff;
 }
 .card__img {
   width: 400px;
   height: 400px;
+  margin-right: 40px;
 }
 .card__info {
   width: 370px;
+  max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2227,9 +2233,10 @@ a.pages__link:active {
   outline: none;
 }
 .card__field {
-  padding-top: 20px;
+  padding-top: 15px;
 }
 .card__text {
+  margin-bottom: 35px;
   color: #828282;
 }
 .card__text a {
@@ -2342,6 +2349,9 @@ a.pages__link:active {
 .hidden {
   display: none;
 }
+.product {
+  margin-bottom: 40px;
+}
 .product__list {
   margin: 0;
   padding: 0;
@@ -2408,6 +2418,7 @@ a.pages__link:active {
 }
 .product__title {
   display: block;
+  margin-bottom: 20px;
   font-weight: 500;
   font-size: 20px;
   line-height: 22px;
@@ -2502,6 +2513,13 @@ a.pages__link:active {
   }
   .filter__title {
     cursor: pointer;
+  }
+  .card__wrap {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .card__img {
+    margin-right: 0;
   }
 }
 @media (max-width: 1022px) {
@@ -2621,6 +2639,21 @@ a.pages__link:active {
   }
   .selection__btn {
     margin-left: 0;
+  }
+  .card__wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .card__img {
+    margin-bottom: 20px;
+  }
+  .product__item {
+    width: 100%;
   }
 }
 @media (max-width: 766px) {
@@ -2770,5 +2803,33 @@ a.pages__link:active {
   .selection__btn {
     margin-bottom: 0;
     width: 100%;
+  }
+  .card__img {
+    width: 100%;
+    height: auto;
+  }
+  .card__name a {
+    font-weight: 500;
+    font-size: 15px;
+  }
+  .product__item,
+  .card__btns {
+    display: block;
+  }
+  .product__info,
+  .card__click,
+  .card__btn {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .card__price {
+    margin-top: 30px;
+  }
+  .product__img {
+    width: 100%;
+    height: auto;
+  }
+  .product__title {
+    text-align: center;
   }
 }
