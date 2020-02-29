@@ -10,16 +10,17 @@
     .filter__title {
       background-color: #F2C94C;
     }
-    .checkbox-label::before {
+    .filter__link::before {
       border: 3px solid #F2C94C;
     }
-    .checkbox:checked + .checkbox-label::before {
-      background-color: #F2C94C;
-    }
-    .checkbox-label {
+    .filter__link {
       &:hover,
       &:active {
         color: @yellow;
+        
+        &::before {
+          background-color: #F2C94C;
+        }
       }
     }
   }
@@ -42,15 +43,13 @@
 }
 
 .filter__drop {
+  .reset();
+  list-style: none;
   padding: 10px 30px;
   padding-bottom: 20px;
 }
 
-.checkbox {
-  display: none;
-}
-
-.checkbox-label {
+.filter__link {
   position: relative;
   display: block;
   padding-top: 12px;
@@ -58,6 +57,7 @@
   padding-left: 37px;
   font-size: 15px;
   line-height: 20px;
+  .transition();
   
   &::before {
     content: "";
@@ -69,14 +69,17 @@
     display: block;
     border: 3px solid #BB6BD9;
     border-radius: 50%;
+    .transition();
   }
   
   &:hover,
   &:active {
     color: @violet;
+    .transition();
+    
+    &::before {
+      background-color: @violet;
+      .transition();
+    }
   }
-}
-
-.checkbox:checked + .checkbox-label::before {
-  background-color: @violet;
 }
