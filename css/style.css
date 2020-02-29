@@ -1081,15 +1081,16 @@ h3,
 .filter__block--yellow .filter__title {
   background-color: #F2C94C;
 }
-.filter__block--yellow .checkbox-label::before {
+.filter__block--yellow .filter__link::before {
   border: 3px solid #F2C94C;
 }
-.filter__block--yellow .checkbox:checked + .checkbox-label::before {
-  background-color: #F2C94C;
-}
-.filter__block--yellow .checkbox-label:hover,
-.filter__block--yellow .checkbox-label:active {
+.filter__block--yellow .filter__link:hover,
+.filter__block--yellow .filter__link:active {
   color: #F2C94C;
+}
+.filter__block--yellow .filter__link:hover::before,
+.filter__block--yellow .filter__link:active::before {
+  background-color: #F2C94C;
 }
 .filter__title {
   width: 100%;
@@ -1113,13 +1114,13 @@ h3,
   background-color: #B666CC;
 }
 .filter__drop {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   padding: 10px 30px;
   padding-bottom: 20px;
 }
-.checkbox {
-  display: none;
-}
-.checkbox-label {
+.filter__link {
   position: relative;
   display: block;
   padding-top: 12px;
@@ -1127,8 +1128,10 @@ h3,
   padding-left: 37px;
   font-size: 15px;
   line-height: 20px;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
 }
-.checkbox-label::before {
+.filter__link::before {
   content: "";
   position: absolute;
   top: 13px;
@@ -1138,13 +1141,20 @@ h3,
   display: block;
   border: 3px solid #BB6BD9;
   border-radius: 50%;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
 }
-.checkbox-label:hover,
-.checkbox-label:active {
+.filter__link:hover,
+.filter__link:active {
   color: #B666CC;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
 }
-.checkbox:checked + .checkbox-label::before {
+.filter__link:hover::before,
+.filter__link:active::before {
   background-color: #B666CC;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
 }
 .news {
   margin-bottom: 30px;
